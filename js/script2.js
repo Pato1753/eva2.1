@@ -14,11 +14,16 @@ function validar(){
 }
 
 function valLetras(elemento, valor, eError){
-    for(let)
-    if (valor == Number)
+    for(let i = 0;valor;++){
+        if(i in ["1","2","3","4","5","6","7","8","9","0"]){
+            console.log("Error, hay un valor numerico en el nombre")
+
+        }
+    }
 }
 
 function valEdad(elemento, valor, eError){
+    
 
 }
 
