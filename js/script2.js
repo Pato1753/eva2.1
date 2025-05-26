@@ -1,4 +1,6 @@
 //validar nombre, debe contener solo letras y no ser vacio
+
+//aaaaaaaaaa
 let personas = []
 
 function validar(){
@@ -14,7 +16,7 @@ function validar(){
         let p = {
             Nombre : vNombre,
             Edad : vEdad,
-        }
+        }s
         personas.push(p)
         eNombre.style.backgroundColor = "green"
         eNombre.style.Color = "white"
@@ -28,13 +30,13 @@ function validar(){
 
 
 function valLetras(elemento, valor, eError){
-    // for(let i = 0;valor;++){
-    //     if(i in ["1","2","3","4","5","6","7","8","9","0"]){
-    //         console.log("Error, hay un valor numerico en el nombre")
-                // return "malo"
+     for(let i = 0;valor;++){
+         if(i in ["1","2","3","4","5","6","7","8","9","0"]){
+             console.log("Error, hay un valor numerico en el nombre")
+                 return "malo"
 
-    //     }
-    // }
+         }
+     }
     if (valor == none){
         alert("Debe ingresar informacion, el campo esta vacio")
         console.log("No hay campos")
@@ -51,7 +53,7 @@ function valEdad(elemento, valor, eError){
 
 function cargarDatos(){
     let contador = 0
-    for(let i = 0;personas[contador],++){
+    for(let i = 0;personas[contador][contador],++){
         innerHTML = ""                    //VER EN CASA --------------------------------------------------------------------------
         
         contador++
