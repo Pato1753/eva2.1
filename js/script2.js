@@ -16,37 +16,64 @@ function validar(){
         let p = {
             Nombre : vNombre,
             Edad : vEdad,
-        }s
+        }
         personas.push(p)
         eNombre.style.backgroundColor = "green"
         eNombre.style.Color = "white"
+        eEdad.style.backgroundColor = "green"
+        eEdad.style.Color = "white"
+        eNombre.innerText = ""
+        eEdad.innerText = ""
     }else if(valNombre =="Malo"){
         alert("Ta malo")
         eNombre.style.backgroundColor = "red"
         eNombre.style.Color = "white"
+        eEdad.style.backgroundColor = "red"
+        eEdad.style.Color = "white"
     }
 
     }
 
 
 function valLetras(elemento, valor, eError){
-     for(let i = 0;valor;++){
-         if(i in ["1","2","3","4","5","6","7","8","9","0"]){
-             console.log("Error, hay un valor numerico en el nombre")
-                 return "malo"
+    const numeros = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
 
-         }
-     }
-    if (valor == none){
-        alert("Debe ingresar informacion, el campo esta vacio")
-        console.log("No hay campos")
-        return "malo"
-    }else{
-        return "bueno"
+    if (valor.length === 0) {
+        eError.innerText = "El nombre no puede estar vacío.";
+        return "malo";
     }
+
+    for (let i = 0; i < valor.length; i++) {
+        let caracter = valor[i];
+        if (numeros.includes(caracter)) {
+            eError.textContent = "El nombre no debe contener números.";
+            return "malo";
+        }
+    }
+    return "bueno";
 }
 
+
+
+
 function valEdad(elemento, valor, eError){
+    if(valor < 18){
+        alert = "error al registrar"
+        eError.innerText = "La edad ingresada es menor a 18"
+        elemento.style.backgroundColor = "yellow"
+        elemento.style.backgroundColor = "grey"
+        return "malo"
+    }else if(valor>100){
+        alert = "error al registrar"
+        eError.innerText = "La edad ingresada es menor a 18"
+        elemento.style.backgroundColor = "yellow"
+        elemento.style.backgroundColor = "grey"
+        return "malo"
+    }else{
+        eError.innerText = ""
+        return "bueno"
+
+    }
 
 
 }
